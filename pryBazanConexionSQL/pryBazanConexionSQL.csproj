@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,11 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDatos\ConexionBD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmNuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVentas.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +89,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Servicios\GrupoServicio.cs" />
+    <Compile Include="Servicios\ProductoServicio.cs" />
+    <Compile Include="Servicios\VendedorServicio.cs" />
+    <Compile Include="Servicios\VentaServicio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
