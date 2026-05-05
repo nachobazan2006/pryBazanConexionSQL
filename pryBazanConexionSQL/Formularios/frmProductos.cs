@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using pryBazanConexionSQL.Servicios;
+using pryBazanConexionSQL.Utilidades;
 
 namespace pryBazanConexionSQL.Formularios
 {
@@ -30,7 +31,7 @@ namespace pryBazanConexionSQL.Formularios
             Text = "Productos";
             StartPosition = FormStartPosition.CenterScreen;
             Width = 820;
-            Height = 520;
+            Height = 600;
 
             Label lblNombre = new Label { Text = "Nombre:", Left = 20, Top = 25, Width = 70 };
             txtNombre = new TextBox { Left = 90, Top = 22, Width = 190 };
@@ -70,6 +71,9 @@ namespace pryBazanConexionSQL.Formularios
 
             Controls.AddRange(new Control[] { lblNombre, txtNombre, lblGrupo, cmbGrupos, lblPrecio, nudPrecio,
                 btnAgregar, btnModificar, btnEliminar, btnLimpiar, lblBuscar, txtBuscar, btnBuscar, lblLimite, dgvProductos });
+            EstilosFormulario.AplicarFormulario(this, "Productos");
+            EstilosFormulario.AplicarBotonSecundario(btnBuscar);
+            EstilosFormulario.AplicarBotonNeutro(btnLimpiar);
 
             Load += frmProductos_Load;
         }

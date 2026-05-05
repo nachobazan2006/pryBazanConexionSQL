@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using pryBazanConexionSQL.Servicios;
+using pryBazanConexionSQL.Utilidades;
 
 namespace pryBazanConexionSQL.Formularios
 {
@@ -31,7 +32,7 @@ namespace pryBazanConexionSQL.Formularios
             Text = "Nueva venta";
             StartPosition = FormStartPosition.CenterScreen;
             Width = 440;
-            Height = 290;
+            Height = 370;
 
             Label lblVendedor = new Label { Text = "Vendedor:", Left = 25, Top = 25, Width = 90 };
             cmbVendedores = new ComboBox { Left = 120, Top = 22, Width = 250, DropDownStyle = ComboBoxStyle.DropDownList };
@@ -51,6 +52,8 @@ namespace pryBazanConexionSQL.Formularios
 
             Controls.AddRange(new Control[] { lblVendedor, cmbVendedores, lblProducto, cmbProductos, lblFecha, dtpFecha,
                 lblKilos, nudKilos, lblPrecio, lblTotal, btnGuardar });
+            EstilosFormulario.AplicarFormulario(this, "Nueva venta");
+            EstilosFormulario.AplicarBotonSecundario(btnGuardar);
 
             Load += frmNuevaVenta_Load;
         }

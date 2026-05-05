@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using pryBazanConexionSQL.Utilidades;
 
 namespace pryBazanConexionSQL.Formularios
 {
@@ -19,23 +20,34 @@ namespace pryBazanConexionSQL.Formularios
         {
             Text = "Sistema Verduleros";
             StartPosition = FormStartPosition.CenterScreen;
-            Width = 420;
-            Height = 260;
+            Width = 520;
+            Height = 360;
 
-            btnVentas = CrearBoton("Ventas", 30);
-            btnProductos = CrearBoton("Productos", 75);
-            btnVendedores = CrearBoton("Vendedores", 120);
-            btnNuevaVenta = CrearBoton("Nueva venta", 165);
+            Label lblDescripcion = new Label
+            {
+                Text = "Seleccione el modulo que desea administrar.",
+                Left = 45,
+                Top = 24,
+                Width = 410,
+                Height = 26
+            };
+
+            btnVentas = CrearBoton("Ventas", 64);
+            btnProductos = CrearBoton("Productos", 110);
+            btnVendedores = CrearBoton("Vendedores", 156);
+            btnNuevaVenta = CrearBoton("Nueva venta", 202);
 
             btnVentas.Click += btnVentas_Click;
             btnProductos.Click += btnProductos_Click;
             btnVendedores.Click += btnVendedores_Click;
             btnNuevaVenta.Click += btnNuevaVenta_Click;
 
+            Controls.Add(lblDescripcion);
             Controls.Add(btnVentas);
             Controls.Add(btnProductos);
             Controls.Add(btnVendedores);
             Controls.Add(btnNuevaVenta);
+            EstilosFormulario.AplicarFormulario(this, "Sistema Verduleros");
         }
 
         private Button CrearBoton(string texto, int top)
@@ -43,10 +55,10 @@ namespace pryBazanConexionSQL.Formularios
             return new Button
             {
                 Text = texto,
-                Left = 110,
+                Left = 145,
                 Top = top,
-                Width = 180,
-                Height = 32
+                Width = 220,
+                Height = 34
             };
         }
 

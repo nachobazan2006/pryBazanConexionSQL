@@ -93,6 +93,7 @@
     <Compile Include="Servicios\ProductoServicio.cs" />
     <Compile Include="Servicios\VendedorServicio.cs" />
     <Compile Include="Servicios\VentaServicio.cs" />
+    <Compile Include="Utilidades\EstilosFormulario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
